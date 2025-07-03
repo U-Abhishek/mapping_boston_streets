@@ -199,15 +199,6 @@ The system expects the following ROS topics:
   <p><em>Left: Real-time odometry trajectory estimation | Right: Point cloud segmentation and feature extraction</em></p>
 </div>
 
-## 🗺️ Boston Streets Dataset
-
-This implementation has been specifically tested and optimized for:
-
-- **Urban environments** with buildings, vehicles, and pedestrians
-- **Varied terrain** including hills, intersections, and road conditions
-- **Dynamic obstacles** typical of city driving scenarios
-- **GPS-denied areas** where LiDAR-based localization is critical
-
 ## 🔧 Customization
 
 ### Adding New Sensors
