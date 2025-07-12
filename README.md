@@ -30,22 +30,6 @@ The system is configured for the NUANCE vehicle's sensor suite:
 
 This project implements and optimizes the LEGO-LOAM SLAM (Simultaneous Localization and Mapping) system for creating high-resolution point cloud maps of urban environments. Specifically designed for mapping Boston streets, the system processes data collected from the NUANCE autonomous vehicle equipped with multiple sensors to generate accurate 3D representations of urban landscapes.
 
-### Key Features
-
-- **Real-time 6-DOF pose estimation** using LiDAR and IMU data fusion
-- **Computationally efficient** processing optimized for ground vehicles
-- **High-accuracy mapping** with sub-meter precision in urban environments
-- **Multi-sensor integration** supporting LiDAR, IMU, GPS, and thermal cameras
-- **ROS-based architecture** for seamless integration with autonomous systems
-
-## 🚗 Sensor Configuration
-
-The system is configured for the NUANCE vehicle's sensor suite:
-
-- **Velodyne VLP-16 LiDAR**: 16 scan lines, 0.2° horizontal resolution
-- **VectorNAV 9-DOF IMU**: Inertial measurements for motion prediction
-- **GPS**: Global positioning and trajectory validation
-- **Thermal Camera**: Environmental context and obstacle detection
 
 ## 🏗️ System Architecture
 
@@ -179,26 +163,6 @@ The system expects the following ROS topics:
 - `/imu/data` (sensor_msgs/Imu): IMU measurements
 - `/gps/fix` (sensor_msgs/NavSatFix): GPS data (optional)
 
-## 📊 Performance
-
-### Accuracy Metrics
-
-- **Localization accuracy**: < 0.1m in typical urban environments
-- **Mapping precision**: Sub-meter resolution for detailed street mapping
-- **Real-time performance**: 10Hz processing rate on standard hardware
-
-### Computational Requirements
-
-- **CPU**: Intel i7 or equivalent (4+ cores recommended)
-- **Memory**: 8GB RAM minimum, 16GB recommended
-- **Storage**: SSD recommended for large datasets
-
-<div align="center">
-  <img src="launch/odometry.jpg" alt="Odometry Results" width="400"/>
-  <img src="launch/seg-total.jpg" alt="Segmentation Results" width="400"/>
-  <p><em>Left: Real-time odometry trajectory estimation | Right: Point cloud segmentation and feature extraction</em></p>
-</div>
-
 ## 🔧 Customization
 
 ### Adding New Sensors
@@ -219,6 +183,12 @@ The system can be adapted for other LiDAR sensors by modifying parameters in `ut
 ```
 
 ## 📝 Publications
+
+<div align="center">
+  <img src="launch/odometry.jpg" alt="Odometry Results" width="400"/>
+  <img src="launch/seg-total.jpg" alt="Segmentation Results" width="400"/>
+  <p><em>Left: Real-time odometry trajectory estimation | Right: Point cloud segmentation and feature extraction</em></p>
+</div>
 
 This work is based on the original LEGO-LOAM paper:
 
